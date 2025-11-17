@@ -1,0 +1,52 @@
+<html>
+  <body style="background:url('https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg') center/cover no-repeat; color:white; text-align:center; height:100vh; margin:0;">
+    <h1 id="msg" style="padding-top:40vh; position:absolute; animation: glow 0.3s infinite alternate;">🎲Click Here to Test Your Chance 🎲</h1>
+    <h2 id="title"
+    style="
+      position:fixed;
+      top:0;
+      left:50%;
+      transform:translateX(-50%);
+      margin:0;
+      padding:15px;
+      font-size:28px;
+      color:white;
+      text-shadow:0 0 10px white;
+      font-weight:bold;
+      z-index:999;
+    ">
+  Andy Gao
+</h2>
+<style>
+  @keyframes glow {from {color: black;text-shadow: 0 0 5px black;}
+    to {color: white;text-shadow: 0 0 20px white;}
+  }
+</style>
+    <script>
+      document.body.onclick = function () {
+        let r = Math.random();
+
+        if (r < 0.33) {
+          document.body.style.backgroundImage = "url('https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyajFsY2dndmRveXY1dzc2Zmt6eDVvc3Q0MmFhZzhlbXVnb2RwanN1YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3vR9dulFs6XNgFry/200w.gif')";
+          msg.innerText = '🍀 Lucky: Click to Try Again 🍀';
+          msg.style.textShadow = "0 0 15px white";
+        }
+        else if (r < 0.66) {
+          document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/91/a5/89/91a5892bcda478077dfd157d7f4f7794.gif')";
+          msg.innerText = '☹️ Unlucky: Click to Try Again☹️';
+          msg.style.textShadow = "0 0 15px white";
+        }
+        else {
+          document.body.style.backgroundImage = "url('https://media.tenor.com/O-La95VJQn8AAAAM/glitch.gif')";
+          msg.innerText = '💻 Glitch 💻';
+          msg.style.textShadow = "0 0 15px white";
+        }
+        msg.style.transform = "rotate(" + (Math.random()*60 - 30) + "deg)";
+        msg.style.left = (30 + (Math.random() * 20 - 10)) + "vw";
+        msg.style.top  = (10 + (Math.random() * 20 - 10)) + "vh";
+
+      };
+      
+    </script>
+  </body>
+</html>
